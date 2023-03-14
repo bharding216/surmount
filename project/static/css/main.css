@@ -1,0 +1,112 @@
+/* SURMOUNT COLOR PALETTE
+RED: #e3adb1
+OFF-WHITE: #F1FAEE
+MINT: #A8DADC
+DARK BLUE: #457B9D
+NAVY: #1D3557
+*/
+
+.navbar-custom {
+  background-color: #1D3557;
+}
+
+
+.navbar-toggler {
+  border: 1px solid white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #A8DADC;
+}
+
+.navbar-collapse {
+  transition: none;
+}
+
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+#contact-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+textarea#message.form-control:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {   
+  border-color: #e3adb1;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #e3adb1;
+  outline: 0 none;
+}
+
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  /* sans-serif is the fallback font */
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, .nav-link, .btn-primary, .footer,
+  select, th, td, li {
+  /* sans-serif is the fallback font */
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.btn-primary {
+  background-color: #e3adb1;
+  border-color: black;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #A8DADC;
+  border-color: black;
+  color: black;
+}
+
+.btn-reversed {
+  background-color: #A8DADC;
+  border-color: black;
+  color: black;
+}
+
+.btn-reversed:hover {
+  background-color: #e3adb1;
+  border-color: black;
+  color: black;
+}
+
+
+
+
+.footer {
+  margin-top: auto;
+  background-color: #1D3557;
+}
+
+.footer-row {
+  width: 100%;
+}
