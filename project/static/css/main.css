@@ -111,3 +111,32 @@ p, .nav-link, .btn-primary, .footer,
 .footer-row {
   width: 100%;
 }
+
+
+/*small screen*/
+@media (max-width: 499px) {
+  .container-fluid {
+    max-width: 100%;
+  }
+}
+
+/*medium-small screen*/
+@media (min-width: 500px) {
+  .container-fluid {
+    max-width: 100%;
+  }
+}
+
+/*medium-large screen*/
+@media (min-width: 768px) {
+  .container-fluid {
+    max-width: 80%;
+  }
+}
+
+/*large screen*/
+@media (min-width: 1024px) {
+  .container-fluid {
+    max-width: 70%;
+  }
+}

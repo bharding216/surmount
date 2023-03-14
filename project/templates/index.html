@@ -24,10 +24,13 @@
 
 
 <div style="background-image:linear-gradient(#F1FAEE, #1D3557); height: 700px;">
-    <div class="pb-5 text-center" id="contact-form" style="padding-top: 75px;">
+    <div class="pb-5 text-center" id="contact-form" style="padding-top: 150px;">
         <div class="container">
             <div id="contact-form-container">
-                <h1 style="color: black;" class="p-5">Let's Partner Up!</h1>
+                <div class="pb-5">
+                    <h1 style="color: black;">Let's Partner Up!</h1>
+                    <p style="color: black;">Complete the form below or send us a text at (512) 766-6884</p>
+                </div>
 
                 <form action="{{ url_for('views.contact_confirmation') }}" method="POST">
 
