@@ -6,6 +6,14 @@ views = Blueprint('views', __name__)
 def index():
     return render_template('index.html')
 
+@views.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
+
+@views.route('/pricing', methods=['GET', 'POST'])
+def pricing():
+    return render_template('pricing.html')
+
 @views.route('/contact_confirmation', methods=['GET', 'POST'])
 def contact_confirmation():
     if request.method == 'POST':

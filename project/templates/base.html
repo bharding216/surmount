@@ -24,8 +24,8 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito" rel="stylesheet">
 
-    <!-- Set Favicon 
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">-->
+    <!-- Set Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
@@ -51,8 +51,7 @@
 
                 <!--Logo to the left-->
                 <a class="navbar-brand ms-3" href="{{ url_for('views.index') }}">
-                    <img src="/static/logo.png" 
-                        width="123" height="70">
+                    <img src="/static/logo.png" id="navbar-logo">
                 </a>
                 
 
@@ -69,7 +68,7 @@
 
                         <li class="nav-item ms-auto">
                             <a class="nav-link" aria-current="page" 
-                                href="#">
+                                href="{{ url_for('views.about') }}">
                                 About
                             </a>
                         </li>
@@ -90,7 +89,7 @@
 
                         <li class="nav-item ms-auto">
                             <a class="nav-link" aria-current="page" 
-                                href="#">
+                                href="{{ url_for('views.pricing') }}">
                                 Pricing
                             </a>
                         </li>

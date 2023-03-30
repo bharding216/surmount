@@ -81,13 +81,13 @@ p, .nav-link, .btn-primary, .footer,
 }
 
 .btn-reversed {
-  background-color: #A8DADC;
+  background-color: #b8b8ff;
   border-color: black;
   color: black;
 }
 
 .btn-reversed:hover {
-  background-color: #e3adb1;
+  background-color: #f8f7ff;
   border-color: black;
   color: black;
 }
@@ -115,6 +115,16 @@ p, .nav-link, .btn-primary, .footer,
     max-width: 100%;
     max-height: 100%;
   }
+
+  #expertise {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #navbar-logo {
+    width: 140px;
+    height: auto;
+  }
 }
 
 /*medium-small screen*/
@@ -126,6 +136,16 @@ p, .nav-link, .btn-primary, .footer,
   #web_builders {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  #expertise {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #navbar-logo {
+    width: 140px;
+    height: auto;
   }
 }
 
@@ -139,6 +159,20 @@ p, .nav-link, .btn-primary, .footer,
     max-width: 100%;
     max-height: 100%;
   }
+
+  #expertise {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #navbar-logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .homepage-cols {
+    padding: 0px 25px;
+  }
 }
 
 /*large screen*/
@@ -150,5 +184,19 @@ p, .nav-link, .btn-primary, .footer,
   #web_builders {
     width: 400px;
     height: auto;
+  }
+
+  #expertise {
+    width: 400px;
+    height: auto;
+  }
+
+  #navbar-logo {
+    width: 175px;
+    height: auto;
+  }
+
+  .homepage-cols {
+    padding: 0px 50px;
   }
 }
