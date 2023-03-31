@@ -8,7 +8,7 @@ NAVY: #1D3557
 */
 
 .navbar-custom {
-  background-color: #9381ff;
+  background-color: #a200a2;
 }
 
 
@@ -75,15 +75,15 @@ p, .nav-link, .btn-primary, .footer,
 }
 
 .btn-primary:hover {
-  background-color: #b8b8ff;
+  background-color: #8282FF;
   border-color: black;
-  color: black;
+  color: white;
 }
 
 .btn-reversed {
-  background-color: #b8b8ff;
+  background-color: #8282FF;
   border-color: black;
-  color: black;
+  color: white;
 }
 
 .btn-reversed:hover {
@@ -97,12 +97,9 @@ p, .nav-link, .btn-primary, .footer,
 
 .footer {
   margin-top: auto;
-  background-color: #9381ff;
+  background-color: #A200A2;
 }
 
-.footer-row {
-  width: 100%;
-}
 
 
 /*small screen*/
@@ -117,8 +114,8 @@ p, .nav-link, .btn-primary, .footer,
   }
 
   #expertise {
-    max-width: 100%;
-    max-height: 100%;
+    width: 250px;
+    height: auto;
   }
 
   #navbar-logo {
@@ -139,8 +136,8 @@ p, .nav-link, .btn-primary, .footer,
   }
 
   #expertise {
-    max-width: 100%;
-    max-height: 100%;
+    width: 300px;
+    height: auto;
   }
 
   #navbar-logo {
@@ -161,8 +158,8 @@ p, .nav-link, .btn-primary, .footer,
   }
 
   #expertise {
-    max-width: 100%;
-    max-height: 100%;
+    width: 350px;
+    height: auto;
   }
 
   #navbar-logo {
