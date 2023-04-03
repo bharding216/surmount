@@ -68,6 +68,15 @@ p, .nav-link, .btn-primary, .footer,
 }
 
 
+ul {
+  margin-left: 30px;
+}
+
+ul ul {
+  margin-left: 30px;
+}
+
+
 .btn-primary {
   background-color: #f8f7ff;
   border-color: black;

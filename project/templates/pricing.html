@@ -4,18 +4,50 @@
 
 {% block content %}
 
-<div class="py-5" style="background-image:linear-gradient(#1616c6, white);">
+<div class="py-5" style="background-image:linear-gradient(#fff0ae, white);">
     <div class="container">
 
         <div class="row mb-3">
-            <p>$1k per small project</p>
-            <p>$5k per large project</p>
+            <h1 style="color:black;" class="pb-4">General Pricing Ranges</h1>
+            <p style="color: black;">Specific pricing depends on many factors, such as project type, scope, and design requirements.</p>
+            <p style="color: black;">Here are some general ranges:</p>
 
-            <p>
-                Just starting off? Depending on your startup, we'll take equity in your business
-                in exchange for building your web application. (Let's talk call-to-action)
-            </p>
+            <ul class="pb-5">
+                <li style="color: black;">Responsive Website</li>
+                    <ul>
+                        <li>Up to $1,000</li>
+                    </ul>
+                <li style="color: black;">SEO and Keyword Research/Strategy</li>
+                    <ul>
+                        <li>Up to $1,000</li>
+                    </ul>
+                <li style="color: black;">Web Application with Database</li>
+                    <ul>
+                        <li>$1,000 - $15,000</li>
+                    </ul>
+                <li style="color: black;">Production Monitoring Tools</li>
+                    <ul>
+                        <li>$1,000 - $15,000</li>
+                    </ul>
+                <li style="color: black;">E-Commerce Website</li>
+                    <ul>
+                        <li>$1,000 - $15,000</li>
+                    </ul>
+            </ul>
 
+
+            <h2 class="pb-4">Just Starting Off?</h2>
+
+            <h4 style="color: black;" class="pb-4">
+                Depending on your startup, we're open to taking some equity in your business
+                in exchange for building your web application.
+                </h4>
+
+            <div class="text-center">
+                <a href="{{ url_for('views.index') }}#contact-form">
+                    <button type="button" class="btn btn-primary">Let's talk</button>
+                </a> 
+            </div>
 
         </div>
 
