@@ -1,9 +1,22 @@
-from flask import Flask, session, request, redirect
+from flask import Flask, request, redirect
 from flask_mail import Mail
 import os
 
+# Create an instance 'mail' of the class 'Mail()'.
+mail = Mail()
+
 def create_app():
     app = Flask(__name__)
+
+    # Mail config settings:
+    app.config['MAIL_SERVER']='live.smtp.mailtrap.io'
+    app.config['MAIL_PORT'] = 587
+    app.config['MAIL_USERNAME'] = 'api'
+    app.config['MAIL_PASSWORD'] = os.getenv('mail_password')
+    app.config['MAIL_USE_TLS'] = True
+    app.config['MAIL_USE_SSL'] = False
+
+    mail.init_app(app)
 
     with app.app_context():
         from .views import views
