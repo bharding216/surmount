@@ -122,6 +122,11 @@ ul ul {
     height: auto;
   }
 
+  #about-image {
+    width: 250px;
+    height: auto;
+  }
+
   #expertise {
     width: 250px;
     height: auto;
@@ -140,6 +145,11 @@ ul ul {
   }
 
   #web_builders {
+    width: 300px;
+    height: auto;
+  }
+
+  #about-image {
     width: 300px;
     height: auto;
   }
@@ -166,6 +176,11 @@ ul ul {
     max-height: 100%;
   }
 
+  #about-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
   #expertise {
     width: 350px;
     height: auto;
@@ -188,6 +203,11 @@ ul ul {
   }
 
   #web_builders {
+    width: 400px;
+    height: auto;
+  }
+
+  #about-image {
     width: 400px;
     height: auto;
   }
