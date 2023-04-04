@@ -1,5 +1,7 @@
 from flask import Flask, request, redirect
 from flask_mail import Mail
+from helpers import generate_sitemap
+from dotenv import load_dotenv
 import os
 
 # Create an instance 'mail' of the class 'Mail()'.
@@ -7,6 +9,9 @@ mail = Mail()
 
 def create_app():
     app = Flask(__name__)
+    load_dotenv()
+
+    app.jinja_env.globals.update(generate_sitemap = generate_sitemap)
 
     # Mail config settings:
     app.config['MAIL_SERVER']='live.smtp.mailtrap.io'

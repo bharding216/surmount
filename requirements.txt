@@ -1,4 +1,5 @@
 Flask==2.2.3
 Flask_Mail==0.9.1
+Flask-Sitemap==0.4.0
 gunicorn==20.1.0
 python-dotenv==1.0.0

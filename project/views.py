@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, flash, url_for
+from flask import Blueprint, render_template, request, redirect, flash, url_for, make_response, send_from_directory
 from project import mail
 from flask_mail import Mail, Message
+from helpers import generate_sitemap
 
 views = Blueprint('views', __name__)
 
@@ -44,3 +45,16 @@ def contact_confirmation():
         flash("We received your message! We'll get back to you within 24 hours to \
               schedule a time to learn more about your project.", "success")
         return render_template('contact_confirmation.html')
+    
+@views.route('/sitemap.xml', methods=['GET'])
+def sitemap():
+    sitemap_xml = generate_sitemap()
+    response = make_response(sitemap_xml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
+
+
+@views.route("/robots.txt")
+def static_from_root():
+    views.static_folder = 'static'
+    return send_from_directory(views.static_folder, request.path[1:])
