@@ -10,6 +10,7 @@ mail = Mail()
 def create_app():
     app = Flask(__name__)
     load_dotenv()
+    app.config['SECRET_KEY'] = os.getenv('secret_key')
 
     app.jinja_env.globals.update(generate_sitemap = generate_sitemap)
 

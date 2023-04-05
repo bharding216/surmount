@@ -42,9 +42,9 @@ def contact_confirmation():
 
         mail.send(msg)
 
-        flash("We received your message! We'll get back to you within 24 hours to \
+        flash("We received your message, " + first_name + "! We'll get back to you within 24 hours to \
               schedule a time to learn more about your project.", "success")
-        return render_template('contact_confirmation.html')
+        return render_template('index.html')
     
 @views.route('/sitemap.xml', methods=['GET'])
 def sitemap():
