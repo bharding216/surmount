@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}About Our Team | Surmount{% endblock %}
+
+{% block content %}
+
+<div class="py-5" style="background-image:linear-gradient(#1616c6, white);">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 justify-content-center d-flex text-center">
+                <h1 style="color: white;">
+                    How to Create a Website that Looks Great on Any Device
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="py-5" style="background-color: white;">
+    <div class="container pb-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-md-8 col-lg-6 align-items-center d-flex justify-content-center">
+                <img src='/static/responsive_web_design.jpg' style="max-width: 100%;" alt="Responsive web design: A laptop, tablet, and mobile device displaying a website">
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>Responsive web design has become increasingly important as more and more people access the internet from their smartphones and tablets. It's crucial to ensure that your website looks great and functions well on any device. Here are three tips to help you achieve that:</p>
+            <ol>
+            <li>
+            <p>Prioritize mobile-first design When designing a responsive website, it's important to start with mobile devices in mind. With more than 50% of internet traffic coming from mobile devices, it's essential to ensure that your site is optimized for these smaller screens. This means using mobile-friendly fonts, images, and layouts that allow users to navigate and interact with your site easily.</p>
+            </li>
+            <li>
+            <p>Use a flexible grid system A flexible grid system is one of the most important components of a responsive website. It allows your content to automatically adjust to different screen sizes and orientations, ensuring that your site always looks great. Using a grid system, you can easily create columns and rows that adjust dynamically based on the device being used to access your site.</p>
+            </li>
+            <li>
+            <p>Test on multiple devices It's important to test your website on as many devices as possible to ensure that it's truly responsive. Don't just test on the latest smartphones and tablets - test on older devices too. This will help you identify any issues that may be preventing your site from functioning correctly on certain devices. Additionally, you should also test your site on different browsers to ensure that it looks and functions consistently across the board.</p>
+            </li>
+            </ol>
+            <p>In conclusion, creating a responsive web design is essential in today's mobile-first world. By prioritizing mobile-first design, using a flexible grid system, and testing on multiple devices, you can create a website that looks great and functions well no matter how it's accessed.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row text-center pb-5">
+        <h2 style="color: black;" class="pb-5">
+            Need help making your site responsive?
+        </h2>
+
+        <a href="{{ url_for('views.index') }}#contact-form">
+            <button type="button" class="btn btn-primary">Let's talk</button>
+        </a>  
+    </div>
+</div>
+
+
+{% endblock %}

@@ -77,6 +77,16 @@ ul ul {
 }
 
 
+
+#blog_link {
+  color: #1616c6;
+}
+
+#blog_link:hover {
+  color: #9494FF;
+}
+
+
 .btn-primary {
   background-color: #f8f7ff;
   border-color: black;

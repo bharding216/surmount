@@ -17,6 +17,16 @@ def about():
 def pricing():
     return render_template('pricing.html')
 
+
+@views.route('/blog', methods=['GET', 'POST'])
+def blog():
+    return render_template('blog_home.html')
+
+@views.route('/responsive_design_tips', methods=['GET', 'POST'])
+def responsive_design_tips():
+    return render_template('responsive_design_tips.html')
+
+
 @views.route('/contact_confirmation', methods=['GET', 'POST'])
 def contact_confirmation():
     if request.method == 'POST':
@@ -46,6 +56,8 @@ def contact_confirmation():
               schedule a time to learn more about your project.", "success")
         return render_template('index.html')
     
+
+
 @views.route('/sitemap.xml', methods=['GET'])
 def sitemap():
     sitemap_xml = generate_sitemap()
