@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | Surmount{% endblock %}
+
+{% block content %}
+
+<div class="py-5" style="background-image:linear-gradient(#1616c6, white);">
+    <div class="container">
+        <div class="text-center">
+            <h1 style="color: white;" class="pb-5">
+                Let's Partner Up
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center pb-5">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form action="{{ url_for('views.contact_confirmation') }}" method="POST">
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="first_name" name="first_name"
+                                placeholder="First Name">
+                            <label for="first_name">First Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="last_name" name="last_name"
+                            placeholder="Last Name">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email"
+                            placeholder="Email">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" name="phone" id="phone" 
+                            placeholder="Phone Number" maxlength="15"/> 
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                        
+
+                            <textarea class="form-control" id="message" name="message"
+                            placeholder="Tell us about your project" style="height: 150px"></textarea>
+                            <label for="message">Tell us about your project</label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

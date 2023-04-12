@@ -17,6 +17,9 @@ def about():
 def pricing():
     return render_template('pricing.html')
 
+@views.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
 
 @views.route('/blog', methods=['GET', 'POST'])
 def blog():
