@@ -29,6 +29,9 @@ def blog():
 def responsive_design_tips():
     return render_template('responsive_design_tips.html')
 
+@views.route('/web_app_factors', methods=['GET', 'POST'])
+def web_app_factors():
+    return render_template('web_app_factors.html')
 
 @views.route('/contact_confirmation', methods=['GET', 'POST'])
 def contact_confirmation():
