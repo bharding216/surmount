@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}5 Key Factors to Consider When Building a Web Application for a New Business: A Guide to UX, Functionality, Security, Performance, and Maintenance | Surmount{% endblock %}
+
+{% block content %}
+
+<div class="py-5" style="background-image:linear-gradient(#1616c6, white);">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 justify-content-center d-flex text-center">
+                <h1 style="color: white;">
+                    5 Key Factors to Consider When Building a Web Application for a New Business: A Guide to UX, Functionality, Security, Performance, and Maintenance
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="py-5" style="background-color: white;">
+    <div class="container pb-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-md-8 col-lg-6 align-items-center d-flex justify-content-center">
+                <img src='/static/ux_wireframe.jpg' style="max-width: 100%;" alt="Creating a wireframe diagram is a great way to ensure flow through an application and improve user experience.">
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>Web applications are an integral part of many modern businesses. They help streamline processes, improve efficiency, and enhance the customer experience. However, building a web application for a new business can be a complex and daunting task. There are many factors to consider to ensure that the application meets the needs of both the business and its customers. In this post, we&apos;ll discuss the most important factors to consider when building a web application for a new business.</p>
+            <h2>User Experience</h2>
+            <p>User experience (UX) should be at the forefront of any web application development process. The application should be easy to use, visually appealing, and intuitive. A well-designed UX can improve customer engagement, increase conversion rates, and promote customer loyalty.</p>
+            <p>When designing the UX, it&apos;s important to keep in mind the target audience and their needs. Conducting user research and usability testing can help ensure that the application meets the expectations and requirements of the users.</p>
+            <h2>Functionality</h2>
+            <p>The functionality of a web application is a critical factor to consider when building a new business. The application should provide the necessary features and functionalities to meet the business goals and objectives. This can include features such as search functionality, online shopping carts, customer management systems, and more.</p>
+            <p>It&apos;s also important to consider the scalability of the application. As the business grows, the application should be able to accommodate increased traffic and data.</p>
+            <h2>Security</h2>
+            <p>Security is a crucial factor to consider when building a web application for a new business. The application should be designed with security in mind from the beginning to ensure that customer data is protected.</p>
+            <p>This includes implementing SSL certificates to encrypt data, using secure login processes, and implementing proper access controls. It&apos;s also important to keep the application updated with the latest security patches and software updates.</p>
+            <h2>Performance</h2>
+            <p>The performance of a web application is critical to its success. The application should be fast, reliable, and responsive. Customers expect fast loading times, and slow performance can lead to frustration and lost revenue.</p>
+            <p>To ensure optimal performance, it&apos;s important to optimize the application&apos;s code, images, and media files. Implementing a content delivery network (CDN) can also help improve performance by caching static assets and reducing server load.</p>
+            <h2>Maintenance and Support</h2>
+            <p>Finally, it&apos;s important to consider the ongoing maintenance and support of the web application. The application should be designed with maintenance in mind to ensure that it can be easily updated and modified as needed.</p>
+            <p>It&apos;s also important to provide ongoing support to customers who may have questions or issues with the application. This can include providing a helpdesk or knowledge base, as well as offering technical support through email or phone.</p>
+            <hr>
+            <p>In conclusion, building a web application for a new business can be a challenging task. However, by considering these five factors - user experience, functionality, security, performance, and maintenance and support - you can help ensure that the application meets the needs of both the business and its customers. By investing in these factors, you can build a successful web application that will help your business thrive.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row text-center pb-5">
+        <h2 style="color: black;" class="pb-5">
+            Enhance your UX and drive more engagement.
+        </h2>
+
+        <a href="{{ url_for('views.contact') }}">
+            <button type="button" class="btn btn-primary">Let's talk</button>
+        </a>  
+    </div>
+</div>
+
+
+{% endblock %}
