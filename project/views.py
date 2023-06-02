@@ -33,6 +33,10 @@ def responsive_design_tips():
 def web_app_factors():
     return render_template('web_app_factors.html')
 
+@views.route('/satx1', methods=['GET', 'POST'])
+def satx1():
+    return render_template('satx1.html')
+
 @views.route('/contact_confirmation', methods=['GET', 'POST'])
 def contact_confirmation():
     if request.method == 'POST':
