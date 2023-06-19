@@ -28,6 +28,9 @@ def create_app():
         from .views import views
         app.register_blueprint(views, url_prefix="/")
 
+        from .blogs import blogs
+        app.register_blueprint(blogs, url_prefix="/blog")
+
         @app.before_request
         def redirect_to_https():
             # Ensure that all requests are secure (HTTPS)

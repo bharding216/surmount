@@ -37,6 +37,19 @@
 
     <title>{% block title %}{% endblock %}</title>
 
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
+    {% endif %}
+
+    {% if title %}
+    <meta property="og:title" content="{{ title }}">
+    {% endif %}
+
+    {% if url %}
+    <meta property="og:url" content="{{ url }}">
+    {% endif %}
+
     {% block head %}
     {% endblock %}
 
@@ -107,7 +120,7 @@
 
                         <li class="nav-item ms-auto">
                             <a class="nav-link" aria-current="page" 
-                                href="{{ url_for('views.blog') }}">
+                                href="{{ url_for('blogs.blog_home') }}">
                                 Blog
                             </a>
                         </li>

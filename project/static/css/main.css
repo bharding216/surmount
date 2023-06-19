@@ -1,14 +1,16 @@
-/* SURMOUNT COLOR PALETTE
-RED: #e3adb1
-OFF-WHITE: #F1FAEE
-MINT: #A8DADC
-DARK BLUE: #457B9D
-NAVY: #1D3557
 
-*/
+:root {
+  --primary-color: #9494FF;
+  --secondary-color: #1616c6;
+  --white: #ffffff;
+  --black: #000000;
+  --off-white: #EDE7E3;
+  --accent-color: #FFDD33;
+}
+
 
 .navbar-custom {
-  background-color: #1616c6;
+  background-color: var(--primary-color);
 }
 
 
@@ -17,11 +19,11 @@ NAVY: #1D3557
 }
 
 .nav-link {
-  color: white;
+  color: var(--black);
 }
 
 .nav-link:hover {
-  color: #FFDD33;
+  color: var(--accent-color);
 }
 
 .navbar-collapse {
@@ -79,34 +81,34 @@ ul ul {
 
 
 #blog_link {
-  color: #1616c6;
+  color: var(--secondary-color);
 }
 
 #blog_link:hover {
-  color: #9494FF;
+  color: var(--primary-color);
 }
 
 
 .btn-primary {
-  background-color: #f8f7ff;
+  background-color: var(--off-white);
   border-color: black;
   color: black;
 }
 
 .btn-primary:hover {
-  background-color: #8282FF;
+  background-color: var(--primary-color);
   border-color: black;
   color: white;
 }
 
 .btn-reversed {
-  background-color: #8282FF;
+  background-color: var(--primary-color);
   border-color: black;
   color: white;
 }
 
 .btn-reversed:hover {
-  background-color: #f8f7ff;
+  background-color: var(--off-white);
   border-color: black;
   color: black;
 }
@@ -116,7 +118,7 @@ ul ul {
 
 .footer {
   margin-top: auto;
-  background-color: #1616c6;
+  background-color: var(--primary-color);
 }
 
 

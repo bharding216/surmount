@@ -21,21 +21,21 @@ def pricing():
 def contact():
     return render_template('contact.html')
 
-@views.route('/blog', methods=['GET', 'POST'])
-def blog():
-    return render_template('blog_home.html')
+# @views.route('/blog', methods=['GET', 'POST'])
+# def blog():
+#     return render_template('blog_home.html')
 
-@views.route('/responsive_design_tips', methods=['GET', 'POST'])
-def responsive_design_tips():
-    return render_template('responsive_design_tips.html')
+# @views.route('/responsive_design_tips', methods=['GET', 'POST'])
+# def responsive_design_tips():
+#     return render_template('responsive_design_tips.html')
 
-@views.route('/web_app_factors', methods=['GET', 'POST'])
-def web_app_factors():
-    return render_template('web_app_factors.html')
+# @views.route('/web_app_factors', methods=['GET', 'POST'])
+# def web_app_factors():
+#     return render_template('web_app_factors.html')
 
-@views.route('/satx1', methods=['GET', 'POST'])
-def satx1():
-    return render_template('satx1.html')
+# @views.route('/satx1', methods=['GET', 'POST'])
+# def satx1():
+#     return render_template('satx1.html')
 
 @views.route('/contact_confirmation', methods=['GET', 'POST'])
 def contact_confirmation():

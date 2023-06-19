@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Blog{% endblock %}
+
+{% block content %}
+
+<div class="pt-5">
+    <div class="container pt-5">
+        <div class="text-center">
+            <h1 style="color: black;" class="pb-5">
+                The Latest Insights in Web Design
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    <div class="container pb-5">
+        <ul>
+            <li>
+                <a id="blog_link" href="{{ url_for('blogs.responsive_design_tips') }}">How to Create a Website that Looks Great on Any Device</a>  
+            </li>
+            <li>
+                <a id="blog_link" href="{{ url_for('blogs.web_app_factors') }}">The Truth About Building a Better Web App: Your UX Guide</a>  
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+<div class="py-5">
+    <div class="container">
+        <div class="text-center">
+            <h3 style="color: black;" class="pb-5">
+                Experienced in providing support for clients in these cities
+            </h3>
+        </div>
+
+        <ul>
+            <li>
+                <a id="blog_link" href="{{ url_for('blogs.satx1') }}">San Antonio, TX</a>  
+            </li>
+            <li>
+                <a id="blog_link" href="{{ url_for('blogs.laredo1') }}">Laredo, TX</a>  
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
