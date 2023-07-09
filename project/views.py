@@ -7,7 +7,11 @@ views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    url = 'https://www.getsurmount.com'
+    description = "Ready to elevate your online presence? Let's work together to create a website that truly represents your brand and helps you achieve your online goals."
+    return render_template('index.html',
+                           url=url,
+                           description=description)
 
 @views.route('/about', methods=['GET', 'POST'])
 def about():
