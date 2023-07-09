@@ -252,32 +252,5 @@
     </script>
 
 
-    <!-- Dynamically update the 'data-aos' attribute based on screen size -->  
-    <script>
-        $(window).on('resize', function () {
-            var screenWidth = $(window).width();
-    
-            // Update data-aos attribute
-            if (screenWidth < 576) {
-                $('[data-aos]').attr('data-aos', $('[data-aos]').data('aosSm'));
-            } else if (screenWidth >= 576 && screenWidth < 768) {
-                $('[data-aos]').attr('data-aos', $('[data-aos]').data('aosMd'));
-            } else {
-                $('[data-aos]').attr('data-aos', $('[data-aos]').data('aos'));
-            }
-    
-            // Update data-aos-delay attribute
-            if (screenWidth < 576) {
-                $('[data-aos-delay]').attr('data-aos-delay', $('[data-aos-delay]').data('aosDelaySm'));
-            } else if (screenWidth >= 576 && screenWidth < 768) {
-                $('[data-aos-delay]').attr('data-aos-delay', $('[data-aos-delay]').data('aosDelayMd'));
-            } else {
-                $('[data-aos-delay]').attr('data-aos-delay', $('[data-aos-delay]').data('aosDelay'));
-            }
-        }).resize();
-    </script>
-
-
-
 </body>
 </html>
