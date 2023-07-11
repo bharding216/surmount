@@ -270,12 +270,12 @@
     <div class="pb-5 text-center" style="padding-top: 110px;">
         <div class="container">
             <div id="contact-form-container">
-                <div class="pb-5" data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">
+                <div class="pb-5">
                     <h1 style="color: black;">Let's Partner Up</h1>
                     <p style="color: black;">Complete the form below or send us a text at (210) 772-5221</p>
                 </div>
 
-                <form action="{{ url_for('views.contact_confirmation') }}" method="POST">
+                <form action="{{ url_for('views.contact') }}" method="POST">
 
                     <div class="row">
                         <div class="col-6">
@@ -317,18 +317,32 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="form-floating mb-5">
-                            
-
+                            <div class="form-floating mb-3">
                                 <textarea class="form-control" id="message" name="message"
                                 placeholder="Tell us about your project" style="height: 150px"></textarea>
                                 <label for="message">Tell us about your project</label>
-
                             </div>
                         </div>
                     </div>
 
-                    <div data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-5">
+                                <select class="form-select" style="padding-top: 12px;" name="budget" id="budget" required>
+                                    <option selected disabled value="">What's your budget?</option>
+                                    {% for option in options %}
+                                        <option value="{{ option }}">{{ option }}</option>
+                                    {% endfor %}
+                                </select>
+
+                                <div>
+                                    <p style="font-size: 14px; text-align: left;">We will be upfront about what we can and can't do for you based on your budget.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
 
@@ -337,5 +351,18 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    const form = document.querySelector('form');
+    const budgetSelect = document.getElementById('budget');
+
+    form.addEventListener('submit', function(event) {
+        if (budgetSelect.value === '') {
+            event.preventDefault(); // Prevent form submission
+            alert('Please select a budget option.'); // Show an error message
+        }
+    });
+</script>
 
 {% endblock %}

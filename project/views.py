@@ -9,9 +9,12 @@ views = Blueprint('views', __name__)
 def index():
     url = 'https://www.getsurmount.com'
     description = "Ready to elevate your online presence? Let's work together to create a website that truly represents your brand and helps you achieve your online goals."
+    budget_options = ['<$2,500', '$2,500-$10,000', '$10,000-20,0000']
+
     return render_template('index.html',
                            url=url,
-                           description=description)
+                           description=description,
+                           options=budget_options)
 
 @views.route('/about', methods=['GET', 'POST'])
 def about():
@@ -23,32 +26,13 @@ def pricing():
 
 @views.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
-
-# @views.route('/blog', methods=['GET', 'POST'])
-# def blog():
-#     return render_template('blog_home.html')
-
-# @views.route('/responsive_design_tips', methods=['GET', 'POST'])
-# def responsive_design_tips():
-#     return render_template('responsive_design_tips.html')
-
-# @views.route('/web_app_factors', methods=['GET', 'POST'])
-# def web_app_factors():
-#     return render_template('web_app_factors.html')
-
-# @views.route('/satx1', methods=['GET', 'POST'])
-# def satx1():
-#     return render_template('satx1.html')
-
-@views.route('/contact_confirmation', methods=['GET', 'POST'])
-def contact_confirmation():
-    if request.method == 'POST':
+    if request.method == 'POST': # Handle form submission
         first_name = request.form['first_name']
         last_name = request.form['last_name']
         email = request.form['email']
         phone = request.form['phone']
         message = request.form['message']
+        budget = request.form['budget']
 
         msg = Message('New Client Request - Surmount',
                         sender = ("Brandon from Surmount", 'hello@getsurmount.com'),
@@ -57,19 +41,24 @@ def contact_confirmation():
                         )
         
         msg.html = render_template('contact_email.html',
-                                   first_name = first_name,
-                                   last_name = last_name,
-                                   email = email,
-                                   phone = phone,
-                                   message = message
+                                   first_name=first_name,
+                                   last_name=last_name,
+                                   email=email,
+                                   phone=phone,
+                                   message=message,
+                                   budget=budget
                                    )
 
         mail.send(msg)
 
         flash("We received your message, " + first_name + "! We'll get back to you within 24 hours to \
               schedule a time to learn more about your project.", "success")
-        return render_template('index.html')
+        return redirect(url_for('views.index'))
     
+    else: # Handle GET request
+        budget_options = ['<$2,500', '$2,500-$10,000', '$10,000-20,0000']
+        return render_template('contact.html',
+                               options=budget_options)
 
 
 @views.route('/sitemap.xml', methods=['GET'])

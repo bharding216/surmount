@@ -7,7 +7,7 @@
 <div class="py-5">
     <div class="container">
         <div class="text-center">
-            <h1 style="color: black;" class="pb-5">
+            <h1 style="color: black;">
                 Let's Partner Up
             </h1>
         </div>
@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row justify-content-center pb-5">
         <div class="col-12 col-md-10 col-lg-8">
-            <form action="{{ url_for('views.contact_confirmation') }}" method="POST">
+            <form action="{{ url_for('views.contact') }}" method="POST">
 
                 <div class="row">
                     <div class="col-6">
@@ -60,13 +60,24 @@
 
                 <div class="row">
                     <div class="col">
-                        <div class="form-floating mb-5">
-                        
-
+                        <div class="form-floating mb-3">
                             <textarea class="form-control" id="message" name="message"
                             placeholder="Tell us about your project" style="height: 150px"></textarea>
                             <label for="message">Tell us about your project</label>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating mb-5">
+                            <select class="form-select" style="padding-top: 12px;" name="budget" id="budget">
+                                <option selected disabled value="">What's your budget?</option>
+                                {% for option in options %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                            <p style="font-size: 14px;">We will be upfront about what we can and can't do for you based on your budget.</p>
                         </div>
                     </div>
                 </div>
@@ -78,5 +89,16 @@
     </div>
 </div>
 
+<script>
+    const form = document.querySelector('form');
+    const budgetSelect = document.getElementById('budget');
+
+    form.addEventListener('submit', function(event) {
+        if (budgetSelect.value === '') {
+            event.preventDefault(); // Prevent form submission
+            alert('Please select a budget option.'); // Show an error message
+        }
+    });
+</script>
 
 {% endblock %}
