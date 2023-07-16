@@ -6,7 +6,7 @@ from helpers import generate_sitemap
 blogs = Blueprint('blogs', __name__, template_folder='blog_templates')
 
 
-@blogs.route('', methods=['GET', 'POST'])
+@blogs.route('/', methods=['GET', 'POST'])
 def blog_home():
     return render_template('/blog_templates/blog_home.html')
 
