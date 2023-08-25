@@ -1,8 +1,9 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, render_template
 from flask_mail import Mail
 from helpers import generate_sitemap
 from dotenv import load_dotenv
 import os
+import logging
 
 # Create an instance 'mail' of the class 'Mail()'.
 mail = Mail()
@@ -36,5 +37,20 @@ def create_app():
             # Ensure that all requests are secure (HTTPS)
             if not request.is_secure and request.host != 'localhost:2000':
                 return redirect(request.url.replace('http://', 'https://'), code=301)
+
+        def handle_error(error):
+            error_code = getattr(error, 'code', 500)  # Get the error code, default to 500
+            return render_template('error.html', error_code=error_code), error_code
+
+        app.register_error_handler(404, handle_error)
+        app.register_error_handler(500, handle_error)
+        app.register_error_handler(400, handle_error)
+        app.register_error_handler(403, handle_error)
+        app.register_error_handler(401, handle_error)
+        app.register_error_handler(405, handle_error)
+        app.register_error_handler(503, handle_error)
+        app.register_error_handler(504, handle_error)
+
+        logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
         return app
