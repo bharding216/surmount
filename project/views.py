@@ -33,7 +33,12 @@ def contact():
         phone = request.form['phone']
         message = request.form['message']
         budget = request.form['budget']
+        panda = request.form['panda']
 
+        if panda.lower() != "white":
+            flash('Form submission rejected due to spam detection (wrong answer to secret question).', category='error')
+            return redirect(url_for('views.contact'))  
+        
         msg = Message('New Client Request - Surmount',
                         sender = ("Brandon from Surmount", 'hello@getsurmount.com'),
                         recipients = ['brandon@getsurmount.com'
